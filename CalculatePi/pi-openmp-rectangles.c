@@ -17,16 +17,14 @@
 #include <stdlib.h>	/* to use malloc(), free() */
 #include <unistd.h>	/* to use getopt() */
 
-void getUserOptions(int argc, char **argv, int *numRects);
 
 int main (int argc, char **argv) {
 
   int whichRect, numRects;
   float rectHeight, totalArea, leftXPos;
 
-  numRects = 80;          /* Each rectangle has a width of 1/numRects */
+  numRects = 200;          /* Each rectangle has a width of 1/numRects */
   totalArea = 0;
-  getUserOptions(argc, argv, &numRects);
   double *areas = (double*)malloc(numRects * sizeof(double));
 
   #pragma omp parallel for private(leftXPos, rectHeight)
@@ -56,21 +54,4 @@ int main (int argc, char **argv) {
   return 0;
 }
 
-void getUserOptions(int argc, char **argv, int *numRects) {
-  char c;
 
-  while ((c = getopt(argc, argv, "r:")) != -1) {
-    switch(c) {
-      case 'r':
-      (*numRects) = atoi(optarg);
-      break;
-      case '?':
-      default:
-      fprintf(stderr, "Usage: ");
-      fprintf(stderr, "%s [-r numRects]\n", argv[0]);
-      exit(EXIT_FAILURE);
-    }
-  }
-  argc -= optind;
-  argv += optind;
-}
