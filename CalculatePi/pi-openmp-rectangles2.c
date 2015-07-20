@@ -29,16 +29,15 @@ int main(int argc, char *argv[])
     double sum = 0.0;
 
     printf("Please enter the number of iterations used to compute pi:\n ");
-    scanf("%d",&num_sub_intervals);
+    scanf("%d", &num_sub_intervals);
     
     double h = 1.0/(double) num_sub_intervals;
 
-    // Record the start time from here on:
+    /* Record the start time from here on: */
     start_time = omp_get_wtime();
     
     int i;
     #pragma omp parallel for if(num_sub_intervals > 100) private(x) reduction(+:sum)
-	
     for(i=0; i < num_sub_intervals; i++){
         x = (i+0.5)*h;
 //	    #pragma omp critical
