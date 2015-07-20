@@ -1,9 +1,9 @@
 /******************************************************************************
-* FILE: pi_serial.c
+* FILE: pi-openmp-montecarlo.c
 * 
 * DESCRIPTION:
-*   Computing Pi Example - Serial
-*   This example demonstrates how to compute pi using monte carlo method
+*   Computing Pi Example - Parallel
+*   This example demonstrates how to compute pi using monte carlo method using openmp
 *
 *
 * AUTHOR: Felipe Gutierrez
