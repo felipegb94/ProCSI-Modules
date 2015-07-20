@@ -43,7 +43,7 @@ int main (int argc, char **argv)
     radius = 1;
     squareArea = numPoints;
 
-    #pragma omp parallel for private(randomX,randomY) reduction(+:circleArea)
+    #pragma omp parallel for private(randomX,randomY,radius) reduction(+:circleArea)
     for(i = 0;i < numPoints;i++)
     {
         randomX = randfrom(0,radius);
