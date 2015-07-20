@@ -6,8 +6,8 @@ EXECUTABLES=pi-serial-rectangles pi-serial-montecarlo pi-openmp-rectangles pi-op
 pi-serial-rectangles: pi-serial-rectangles.c
 	$(CC) $(OPTS) pi-serial-rectangles pi-serial-rectangles.c
 
-pi-serial-montecarlo: pi-serial-montercarlo.c
-	$(CC) $(OPTS) pi-serial-montercarlo pi-serial-montercarlo.c
+pi-serial-montecarlo: pi-serial-montecarlo.c
+	$(CC) $(OPTS) pi-serial-montecarlo pi-serial-montecarlo.c
 
 pi-openmp-rectangles: pi-openmp-rectangles.c
 	$(CC) $(OPTS) pi-openmp-rectangles  pi-openmp-rectangles.c
