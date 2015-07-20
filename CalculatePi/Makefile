@@ -1,6 +1,6 @@
 CC=gcc
 OPTS=-std=c11 -lm -fopenmp -o
-EXECUTABLES=pi-serial-rectangles pi-serial-montecarlo pi-openmp-rectangles pi-openmp-rectangles2 
+EXECUTABLES=pi-serial-rectangles pi-serial-montecarlo pi-openmp-rectangles pi-openmp-rectangles2 pi-openmp-montecarlo 
 
 
 pi-serial-rectangles: pi-serial-rectangles.c
@@ -15,8 +15,8 @@ pi-openmp-rectangles: pi-openmp-rectangles.c
 pi-openmp-rectangles2: pi-openmp-rectangles2.c
 	$(CC) $(OPTS) pi-openmp-rectangles2  pi-openmp-rectangles2.c
 
-pi-openmp-montecarlo: pi-openmp-montercarlo.c
-	$(CC) $(OPTS) pi-openmp-montercarlo pi-openmp-montercarlo.c
+pi-openmp-montecarlo: pi-openmp-montecarlo.c
+	$(CC) $(OPTS) pi-openmp-montecarlo pi-openmp-montecarlo.c
 
 
 all:
