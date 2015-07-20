@@ -23,7 +23,7 @@ int main (int argc, char **argv) {
   int whichRect, numRects;
   float rectHeight, totalArea, leftXPos;
 
-  numRects = 200;          /* Each rectangle has a width of 1/numRects */
+  numRects = 1000000;          /* Each rectangle has a width of 1/numRects */
   totalArea = 0;
   double *areas = (double*)malloc(numRects * sizeof(double));
 
