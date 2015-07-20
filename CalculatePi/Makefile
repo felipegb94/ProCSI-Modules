@@ -1,13 +1,17 @@
-CC=clang
-OPTS=-std=c11 -fopenmp -o
-EXECUTABLES=pi-omp pi-serial 
+CC=gcc
+OPTS=-std=c11 -lm -fopenmp -o
+EXECUTABLES=pi-serial-rectangles pi-openmp-rectangles pi-openmp-rectangles2
 
 
-pi-omp: pi-omp.c
-	$(CC) $(OPTS) pi-omp pi-omp.c
+pi-serial-rectangles: pi-serial-rectangles.c
+	$(CC) $(OPTS) pi-serial-rectangles pi-serial-rectangles.c
 
-pi-serial: pi-serial.c
-	$(CC) $(OPTS) pi-serial pi-serial.c
+pi-openmp-rectangles: pi-openmp-rectangles.c
+	$(CC) $(OPTS) pi-openmp-rectangles  pi-openmp-rectangles.c
+
+pi-openmp-rectangles2: pi-openmp-rectangles2.c
+	$(CC) $(OPTS) pi-openmp-rectangles2  pi-openmp-rectangles2.c
+
 
 all:
 	make clean
