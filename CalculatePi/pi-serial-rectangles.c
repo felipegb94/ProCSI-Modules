@@ -1,5 +1,5 @@
 /******************************************************************************
-* FILE: pi_serial.c
+* FILE: pi-serial-rectangles.c
 * 
 * DESCRIPTION:
 *	Computing Pi Example - Serial
@@ -11,6 +11,7 @@
 *	but you are welcome to.
 *
 * AUTHOR: Phil List
+* Modified By: Felipe Gutierrez
 ******************************************************************************/
 
 #include <stdio.h>      /* to use printf() */
