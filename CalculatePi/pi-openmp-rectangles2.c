@@ -23,13 +23,13 @@
 
 int main(int argc, char *argv[]) 
 {
-    int num_sub_intervals = 0;
+    int num_sub_intervals = 10000000;
     double start_time, end_time, time_diff;
     double x, pi=0.0;
     double sum = 0.0;
 
-    printf("Please enter the number of iterations used to compute pi:\n ");
-    scanf("%d", &num_sub_intervals);
+   // printf("Please enter the number of iterations used to compute pi:\n ");
+   // scanf("%d", &num_sub_intervals);
     
     double h = 1.0/(double) num_sub_intervals;
 

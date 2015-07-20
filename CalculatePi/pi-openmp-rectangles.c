@@ -30,7 +30,7 @@ int main (int argc, char **argv) {
   #pragma omp parallel for private(leftXPos, rectHeight)
   for (whichRect=0; whichRect < numRects; whichRect++)
   {
-    printf("thread num: %i of %i\n", omp_get_thread_num(), omp_get_num_threads());
+  //  printf("thread num: %i of %i\n", omp_get_thread_num(), omp_get_num_threads());
 
     /* this rectangle's x-position */
     leftXPos = whichRect * ( 1.0 / numRects);       
