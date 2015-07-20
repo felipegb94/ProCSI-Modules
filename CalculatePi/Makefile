@@ -15,6 +15,9 @@ pi-openmp-rectangles: pi-openmp-rectangles.c
 pi-openmp-rectangles2: pi-openmp-rectangles2.c
 	$(CC) $(OPTS) pi-openmp-rectangles2  pi-openmp-rectangles2.c
 
+pi-openmp-montecarlo: pi-openmp-montercarlo.c
+	$(CC) $(OPTS) pi-openmp-montercarlo pi-openmp-montercarlo.c
+
 
 all:
 	make clean
