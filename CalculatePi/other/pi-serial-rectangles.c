@@ -24,6 +24,13 @@ int main (int argc, char **argv) {
     
 	numRects = 1000000;		/* And each rectangle has a width of 1/numRects */
 	totalArea = 0;
+
+	if(CUDA_ENABLED){
+		printf("CUDA is enabled\n");
+	}
+	else{
+		printf("Cuda is not enabled\n");
+	}
 	
 	        
 	for (whichRect=0; whichRect < numRects; whichRect++){

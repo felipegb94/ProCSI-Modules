@@ -38,7 +38,7 @@ int main (int argc, char **argv)
     double randomX; /* Generate a random number between 0 and radius*/
     double randomY; /* Generate random number between 0 and radius */
 
-    numPoints = 10000000;
+    numPoints = 20e6;
     radius = 1;
     squareArea = numPoints;
 
